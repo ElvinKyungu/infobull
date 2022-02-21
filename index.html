@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::before,
+        ::after{
+            box-sizing: border-box;
+            margin: 0;padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+        .container{
+            padding: 50px 10vh 100px;
+            font-size: 40px;
+        }
+        a:visited{
+            color: blue;
+        }
+        .container h1{
+            margin-bottom: 20px;
+        }
+        .container-tooltip{
+            width: 425px;
+            min-height: 200px;
+            height: auto;
+            padding: 15px;
+            font-style: 25px;
+            background-color: white;
+            box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            z-index: 100;
+            display: none;
+            opacity: 0;
+        }
+        .fade-in{
+            display: block;
+            animation: fade 0.2s linear forwards;
+        }
+        @keyframes fade {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wikipedia Tooltip</h1>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis ex, ipsum libero est dolorem quod cupiditate quam,
+            <span class="tooltip" data-id="1"><a href="">Tooltip1</a></span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis ex, ipsum libero est dolorem quod cupiditate quam,
+            <span class="tooltip" data-id="2"><a href="">Tooltip1</a></span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nobis ex, ipsum libero est dolorem quod cupiditate quam,
+            <span class="tooltip" data-id="3"><a href="">Tooltip1</a></span>
+
+        </p>
+    </div>
+    <div class="container-tooltip">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellat ipsa facilis id hic illum aut quos delectus tempora quas. Ipsa veniam aliquam magni sint fugit reprehenderit aut, quasi in.
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
